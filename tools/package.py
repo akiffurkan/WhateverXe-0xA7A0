@@ -39,7 +39,9 @@ def main():
     assert info['CFBundleIdentifier'] == 'org.b00t0x.WhateverXe'
     assert manifest['version'] == version and manifest['configuration'] == args.configuration
     assert sha(source_exe) == manifest['sha256'], 'build manifest mismatch'
-    assert not args.tag or args.tag.removeprefix('v') == version, 'tag/version mismatch'
+    # Allow custom tags like v0.8.1-rplp-a7a0
+    tag_clean = args.tag.removeprefix('v').split('-')[0]
+    assert not args.tag or tag_clean == version, 'tag/version mismatch'
     assert run('xcrun', 'lipo', '-archs', source_exe) == 'x86_64'
     output.mkdir(parents=True, exist_ok=True)
     archive = output / f'WhateverXe-{version}-{args.configuration}.zip'
