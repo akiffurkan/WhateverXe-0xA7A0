@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 def release_notes(changelog, version):
-    version = version.removeprefix('v')
+    version = version.removeprefix('v').split('-')[0]
     sections = re.split(r'^## (.+)\n', changelog, flags=re.MULTILINE)
     matches = [body.strip() for heading, body in zip(sections[1::2], sections[2::2])
                if heading == version]
