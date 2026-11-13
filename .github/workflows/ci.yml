@@ -1,4 +1,4 @@
-name: WhateverXe-0.8.1-Raptor-Lake-P
+name: WhateverXe-0.8.2-Raptor-Lake-P
 
 on:
   push:
@@ -107,6 +107,6 @@ jobs:
             echo "Release already exists"
           else
             gh release create "$RELEASE_TAG" --verify-tag \
-              --title "WhateverXe 0.8.1 - Raptor Lake-P A7A0 (96 EU) Support" --notes-file ../release-notes.md
+              --title "WhateverXe 0.8.2 - Raptor Lake-P A7A0 (96 EU) Support" --notes-file ../release-notes.md
           fi
           gh release upload "$RELEASE_TAG" ./*.zip SHA256SUMS --clobber
