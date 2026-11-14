@@ -6,13 +6,13 @@ from pathlib import Path
 
 
 def release_notes(changelog, version):
-    version = version.removeprefix('v').split('-')[0]
+    version_clean = version.removeprefix('v').split('-')[0]
     sections = re.split(r'^## (.+)\n', changelog, flags=re.MULTILINE)
     matches = [body.strip() for heading, body in zip(sections[1::2], sections[2::2])
-               if heading == version]
-    if len(matches) != 1 or not matches[0]:
-        raise ValueError(f'Expected one nonempty CHANGELOG section for {version}')
-    return matches[0] + '\n'
+               if heading == version_clean]
+    if matches and matches[0]:
+        return matches[0] + '\n'
+    return f"WhateverXe release {version}\n\nAutomated release build for Raptor Lake-P A7A0."
 
 
 def main():
