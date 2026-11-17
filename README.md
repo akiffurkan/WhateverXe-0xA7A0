@@ -35,7 +35,16 @@ Primary testbench hardware:
 
 ---
 
-## 💻 Compatibility & Hardware
+## 🤝 Credits & Acknowledgments
+
+- **[b00t0x](https://github.com/b00t0x)** — For the revolutionary WhateverXe project and reverse-engineering Apple's Xe driver stack.
+- **[Acidanthera](https://github.com/acidanthera)** — For Lilu, WhateverGreen, and the gold-standard Hackintosh kernel extension ecosystem.
+- **[Akif Furkan Emir](https://github.com/akiffurkan)** — Fork maintenance, Raptor Lake-P `0xA7A0` testbench, and documentation.
+- Thanks to [JulioNectar/XPS13Plus](https://github.com/JulioNectar/Hackintosh-XPS13Plus-IrisXe-Tahoe) for sharing its Xe graphics work.
+- Internal-panel work also draws on [WhateverXe-RaptorLakeP](https://github.com/samranahmad09/WhateverXe-RaptorLakeP), [X1Carbon-G11](https://github.com/dssoftx/Hackintosh-X1Carbon-G11-IrisXe-Tahoe), and the [Linux i915 display sources](https://github.com/torvalds/linux/tree/v6.12/drivers/gpu/drm/i915/display).
+- eDP boot-handoff and startup corrections also reference reports and patches from [ann0see](https://github.com/ann0see/WhateverXe), [belugaa-01](https://github.com/belugaa-01/WhateverXe-Patched), [Thatisjigen](https://github.com/Thatisjigen/WhateverXe), and [zsz-of](https://github.com/zsz-of/WhateverXe).
+- Display wake rearming and GGTT restoration were informed by [jkbuha/WhateverXe](https://github.com/jkbuha/WhateverXe).
+
 
 | Family | Device ID | Subslice / EU | Test Hardware | Status |
 | :--- | :---: | :---: | :--- | :---: |
@@ -56,8 +65,16 @@ Ensure the following kexts are loaded in strict order:
 3. `WhateverXe.kext` (This driver)
 4. `AMFIPass.kext` (Must use the custom **AMFIPass 1.4.1 Mod**)
 
-> [!IMPORTANT]
-> `WhateverGreen.kext` **must be completely disabled** when `WhateverXe.kext` is active. Do not enable both simultaneously.
+## 🤝 Credits & Acknowledgments
+
+- **[b00t0x](https://github.com/b00t0x)** — For the revolutionary WhateverXe project and reverse-engineering Apple's Xe driver stack.
+- **[Acidanthera](https://github.com/acidanthera)** — For Lilu, WhateverGreen, and the gold-standard Hackintosh kernel extension ecosystem.
+- **[Akif Furkan Emir](https://github.com/akiffurkan)** — Fork maintenance, Raptor Lake-P `0xA7A0` testbench, and documentation.
+- Thanks to [JulioNectar/XPS13Plus](https://github.com/JulioNectar/Hackintosh-XPS13Plus-IrisXe-Tahoe) for sharing its Xe graphics work.
+- Internal-panel work also draws on [WhateverXe-RaptorLakeP](https://github.com/samranahmad09/WhateverXe-RaptorLakeP), [X1Carbon-G11](https://github.com/dssoftx/Hackintosh-X1Carbon-G11-IrisXe-Tahoe), and the [Linux i915 display sources](https://github.com/torvalds/linux/tree/v6.12/drivers/gpu/drm/i915/display).
+- eDP boot-handoff and startup corrections also reference reports and patches from [ann0see](https://github.com/ann0see/WhateverXe), [belugaa-01](https://github.com/belugaa-01/WhateverXe-Patched), [Thatisjigen](https://github.com/Thatisjigen/WhateverXe), and [zsz-of](https://github.com/zsz-of/WhateverXe).
+- Display wake rearming and GGTT restoration were informed by [jkbuha/WhateverXe](https://github.com/jkbuha/WhateverXe).
+
 
 ### 2. Boot Arguments (`NVRAM -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args`)
 Add the following required flags:
@@ -124,6 +141,13 @@ Automated artifacts are also compiled on every commit via GitHub Actions.
 
 ## 🤝 Credits & Acknowledgments
 
+## 🤝 Credits & Acknowledgments
+
 - **[b00t0x](https://github.com/b00t0x)** — For the revolutionary WhateverXe project and reverse-engineering Apple's Xe driver stack.
 - **[Acidanthera](https://github.com/acidanthera)** — For Lilu, WhateverGreen, and the gold-standard Hackintosh kernel extension ecosystem.
 - **[Akif Furkan Emir](https://github.com/akiffurkan)** — Fork maintenance, Raptor Lake-P `0xA7A0` testbench, and documentation.
+- Thanks to [JulioNectar/XPS13Plus](https://github.com/JulioNectar/Hackintosh-XPS13Plus-IrisXe-Tahoe) for sharing its Xe graphics work.
+- Internal-panel work also draws on [WhateverXe-RaptorLakeP](https://github.com/samranahmad09/WhateverXe-RaptorLakeP), [X1Carbon-G11](https://github.com/dssoftx/Hackintosh-X1Carbon-G11-IrisXe-Tahoe), and the [Linux i915 display sources](https://github.com/torvalds/linux/tree/v6.12/drivers/gpu/drm/i915/display).
+- eDP boot-handoff and startup corrections also reference reports and patches from [ann0see](https://github.com/ann0see/WhateverXe), [belugaa-01](https://github.com/belugaa-01/WhateverXe-Patched), [Thatisjigen](https://github.com/Thatisjigen/WhateverXe), and [zsz-of](https://github.com/zsz-of/WhateverXe).
+- Display wake rearming and GGTT restoration were informed by [jkbuha/WhateverXe](https://github.com/jkbuha/WhateverXe).
+
